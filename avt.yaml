@@ -3,7 +3,7 @@
 apiVersion: spaces.tanzu.vmware.com/v1alpha1
 kind: AvailabilityTarget
 metadata:
- name: <AVT> 
+ name: <AVT_NAME> 
 spec:
  affinity:
    clusterAffinity:
@@ -12,14 +12,14 @@ spec:
            - key: tmc.cloud.vmware.com/creator
              operator: In
              values:
-               - <CREATOR>
+               - <VALUE>
            - key: location
              operator: In
              values:
-               - ireland
+               - <VALUE>
            - key: owner
              operator: In
              values:
-               - <OWNER_NAME>
+               - <VALUE>
    clusterAntiAffinity:
      clusterSelectorTerms: []

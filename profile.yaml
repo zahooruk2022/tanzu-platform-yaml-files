@@ -1,3 +1,4 @@
+# Add your Profile name, FQDN, and Zone ID below
 ---
 apiVersion: spaces.tanzu.vmware.com/v1alpha1
 kind: Profile

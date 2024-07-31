@@ -1,0 +1,52 @@
+​​---
+apiVersion: spaces.tanzu.vmware.com/v1alpha1
+kind: Profile
+metadata:
+ name: zalam-profile-1
+ requiredCapabilities:
+   - name: certificates.tanzu.vmware.com
+   - name: egress.tanzu.vmware.com
+   - name: multicloud-ingress.tanzu.vmware.com
+ traits:
+   - values:
+       inline:
+         multicloud-cert-manager.tanzu.vmware.com:
+           duration: 87600h
+           privateKey:
+             size: 384
+             algorithm: ECDSA
+           name: default-issuer
+           renewBefore: 2160h
+           selfSigned:
+             commonName: ca.company.biz
+             secretName: root-secret
+     excludedKeys: []
+     name: multicloud-cert-manager.tanzu.vmware.com
+   - values:
+       inline:
+         egress.tanzu.vmware.com:
+           open: false
+     excludedKeys: []
+     name: egress.tanzu.vmware.com
+   - values:
+       inline:
+         multicloud-ingress.tanzu.vmware.com:
+           listenerTemplates:
+             - protocol: HTTPS
+               port: 443
+               namePrefix: https-
+               tls:
+                 secretRef: prod-certs
+             - protocol: HTTP
+               port: 80
+               namePrefix: http-
+           gslb:
+             dns:
+               zoneId: <ZONE-ID>
+             authentication:
+               credentialRef: 54e0fc867b34df0dd354dd243d630d89
+           domain: <FQDN>
+           name: default-gateway
+           useClusterIssuer: false
+     excludedKeys: []
+     name: multicloud-ingress.tanzu.vmware.com

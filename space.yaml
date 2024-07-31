@@ -1,0 +1,15 @@
+ apiVersion: spaces.tanzu.vmware.com/v1alpha1
+ kind: Space
+ metadata:
+   name: zalam-space-1
+ spec:
+   template:
+     spec:
+       profiles:
+       - name: spring-dev.tanzu.vmware.com
+       - name: zalam-profile-1
+   availabilityTargets:
+   - name: zalam-avt-1
+     replicas: 1
+   updateStrategy:
+     type: Recreate

@@ -1,8 +1,9 @@
+# Add AVT name and labels below
 ---
 apiVersion: spaces.tanzu.vmware.com/v1alpha1
 kind: AvailabilityTarget
 metadata:
- name: <AVT>
+ name: <AVT> 
 spec:
  affinity:
    clusterAffinity:
@@ -15,7 +16,7 @@ spec:
            - key: location
              operator: In
              values:
-               - <LOCATION>
+               - ireland
            - key: owner
              operator: In
              values:

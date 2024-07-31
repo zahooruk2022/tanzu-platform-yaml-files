@@ -1,3 +1,4 @@
+# Add name of your cluster below
 fullName:
  credentialName: nemea-sa-eks-lcm
  name: <CLUSTER_NAME>

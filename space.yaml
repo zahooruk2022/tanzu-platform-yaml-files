@@ -1,3 +1,4 @@
+ # Add your Space name, profile name, and avt name below
  apiVersion: spaces.tanzu.vmware.com/v1alpha1
  kind: Space
  metadata:

@@ -1,4 +1,6 @@
-​​---
+# Add name of your Profile below 
+# Add Zone ID and FQDN below 
+​---
 apiVersion: spaces.tanzu.vmware.com/v1alpha1
 kind: Profile
 metadata:
@@ -42,9 +44,11 @@ metadata:
                namePrefix: http-
            gslb:
              dns:
+             # Your Zone ID 
                zoneId: <ZONE-ID>
              authentication:
                credentialRef: 54e0fc867b34df0dd354dd243d630d89
+           # Your FQDN    
            domain: <FQDN>
            name: default-gateway
            useClusterIssuer: false

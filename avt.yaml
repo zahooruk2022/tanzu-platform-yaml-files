@@ -2,7 +2,7 @@
 apiVersion: spaces.tanzu.vmware.com/v1alpha1
 kind: AvailabilityTarget
 metadata:
- name: <CLUSTER_NAME>
+ name: <AVT>
 spec:
  affinity:
    clusterAffinity:

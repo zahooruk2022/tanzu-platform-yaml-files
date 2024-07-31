@@ -1,6 +1,6 @@
 fullName:
  credentialName: nemea-sa-eks-lcm
- eksClusterName: zalam-eks-1
+ eksClusterName: <CLUSTER_NAME>
  name: default-node-pool
  region: eu-west-1
 spec:

@@ -1,12 +1,12 @@
 fullName:
  credentialName: nemea-sa-eks-lcm
- name: zalam-eks-1
+ name: <CLUSTER_NAME>
  region: eu-west-1
 meta:
  labels:
    env: dev
    location: ireland
-   owner: zahoor
+   owner: <OWNER_NAME>
 spec:
  clusterGroupName: run
  config:

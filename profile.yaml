@@ -2,7 +2,7 @@
 apiVersion: spaces.tanzu.vmware.com/v1alpha1
 kind: Profile
 metadata:
- name: zalam-profile-1
+ name: <PROFILE_NAME>
  requiredCapabilities:
    - name: certificates.tanzu.vmware.com
    - name: egress.tanzu.vmware.com
